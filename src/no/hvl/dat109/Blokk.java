@@ -74,7 +74,7 @@ public class Blokk {
 				break;
 			
 		}
-		return null;
+		return 0;
 	}
 	
 	/**
@@ -103,7 +103,7 @@ public class Blokk {
 	 * @return Returnerer hvilket dyr det er så mange antall i tabellen. Returnerer null hvis ikke. 
 	 */
 	private static String antallLike(Integer antall, String[] verdier) {
-		Integer like;
+		Integer like = 0;
 		
 		for(String s : verdier) {
 			like = 0;
