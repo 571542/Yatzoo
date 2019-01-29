@@ -2,6 +2,7 @@
 ## Java kode:
 - [ ] Fiks "To Par" metoden
 - [ ] (Validering av brukerinput og feilmeldinger)??
+- [ ] Litt mer JavaDoc rundt omkring??
 
 ## Diagrammer:
 - [ ] Oppdater diagrammene til å passe bedre med Java koden
