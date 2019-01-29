@@ -24,4 +24,25 @@ public class Spiller {
 		System.out.println();
 	}
 
+	public String getNavn() {
+		return navn;
+	}
+
+	public void setNavn(String navn) {
+		this.navn = navn;
+	}
+
+	public Integer getPoengsum() {
+		return poengsum;
+	}
+
+	public void setPoengsum(Integer poengsum) {
+		this.poengsum = poengsum;
+	}
+
+	@Override
+	public String toString() {
+		return navn + ": "+ poengsum+" poeng.";
+	}
+
 }

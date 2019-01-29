@@ -3,8 +3,6 @@
  */
 package no.hvl.dat109;
 
-import java.util.List;
-
 /**
  * @author Jostein
  *
@@ -42,13 +40,13 @@ public class Blokk {
 		
 		switch(runde) {				
 			case 7://Tre like
-				if(antallLike(3, verdier)) {
+				if(antallLike(3, verdier) != null) {
 					return 3;
 				}
 				break;
 				
 			case 8://Fire like
-				if(antallLike(4, verdier)) {
+				if(antallLike(4, verdier) != null) {
 					return 4;
 				}
 				break;
@@ -61,14 +59,14 @@ public class Blokk {
 				break;
 				
 			case 11://Unike
-				if(!(antallLike(2,verdier))) {
+				if((antallLike(2,verdier))== null) {
 					return 5;
 				}
 				break;
 				
 			case 12://Yatzoo
-				if(antallLike(5, verdier)) {
-					return 4;
+				if(antallLike(5, verdier) != null) {
+					return 10;
 				}
 				break;
 			
@@ -76,6 +74,14 @@ public class Blokk {
 		return null;
 	}
 	
+	/**
+	 * 
+	 * Metoden finner hvor mange antall det er av et type dyr blant en string-tabell.
+	 * 
+	 * @param dyr Hvilket dyr det letes etter
+	 * @param verdier String-tabell over alle terningverdiene
+	 * @return Antall av ønsket dyr i verdier-tabellen. 
+	 */
 	private static Integer antallAvDyr(String dyr, String[] verdier) {
 		Integer antall = null;
 		for(String s : verdier) {
@@ -86,13 +92,31 @@ public class Blokk {
 		return antall;
 	}
 	
-	private static boolean antallLike(Integer antall, String[] verdier) {
+	/**
+	 * 
+	 * Metoden finner om det er et anntall like eller mer av en verdi av alle verdier i terning-tabellen. 
+	 * 
+	 * @param antall Hvor mange like av hver man skal finne. F.eks. ved tre like må man sette antall = 3.
+	 * @param verdier String-tabell over alle terningverdiene
+	 * @return Returnerer hvilket dyr det er så mange antall i tabellen. Returnerer null hvis ikke. 
+	 */
+	private static String antallLike(Integer antall, String[] verdier) {
+		Integer like;
 		
-		//test
-		
-		
-		
-		return false;
+		for(String s : verdier) {
+			like = 0;
+			for(String r : verdier) {
+				if(r.equals(s)) {
+					like++;
+				}
+				
+				if(like >= antall) {
+					return s;
+				}
+			}
+		}
+				
+		return null;
 	}
-	
+		
 }
