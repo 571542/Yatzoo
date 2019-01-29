@@ -37,25 +37,15 @@ public class Blokk {
 			return antallAvDyr(kategorier[runde], verdier);
 		}
 		
-		switch(runde) {				
-<<<<<<< HEAD
+		switch(runde) {
 			case 6://Tre like
 				if(antallLike(3, verdier) != null) {
-=======
-			case 7://Tre like
-				if(antallLike(3, verdier)) {
->>>>>>> f406317153fea89de00c011ce9a7f24837569e53
 					return 3;
 				}
 				break;
 				
-<<<<<<< HEAD
 			case 7://Fire like
 				if(antallLike(4, verdier) != null) {
-=======
-			case 8://Fire like
-				if(antallLike(4, verdier)) {
->>>>>>> f406317153fea89de00c011ce9a7f24837569e53
 					return 4;
 				}
 				break;
@@ -66,37 +56,20 @@ public class Blokk {
 				}
 				break;
 				
-<<<<<<< HEAD
 			case 9://Hus
 				if(toPar(verdier) && antallLike(3, verdier) != null) {
-=======
-			case 10://Hus
-				if(treLike() && toPar()) {
->>>>>>> f406317153fea89de00c011ce9a7f24837569e53
 					return 5;
 				}
 				break;
-				
-<<<<<<< HEAD
+
 			case 10://Unike
 				if((antallLike(2,verdier)) == null) {
-=======
-			case 11://Unike
-				if(!(antallLike(2,verdier))) {
->>>>>>> f406317153fea89de00c011ce9a7f24837569e53
 					return 5;
 				}
 				break;
-				
-<<<<<<< HEAD
 			case 11://Yatzoo
 				if(antallLike(5, verdier) != null) {
 					return 10;
-=======
-			case 12://Yatzoo
-				if(antallLike(5, verdier)) {
-					return 4;
->>>>>>> f406317153fea89de00c011ce9a7f24837569e53
 				}
 				break;
 			
@@ -122,7 +95,6 @@ public class Blokk {
 		return antall;
 	}
 	
-<<<<<<< HEAD
 	/**
 	 * Metoden finner om det er et anntall like eller mer av en verdi av alle verdier i terning-tabellen. 
 	 * 
@@ -176,15 +148,6 @@ public class Blokk {
 	 */
 	public static String getRundeNavn(Integer runde) {
 		return kategorier[runde];
-	}
-=======
-	private static boolean antallLike(Integer antall, String[] verdier) {
-		
-		
-		
->>>>>>> f406317153fea89de00c011ce9a7f24837569e53
-		
-		return false;
 	}
 	
 }

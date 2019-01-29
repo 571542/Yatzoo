@@ -1,15 +1,11 @@
 package no.hvl.dat109;
 
 import javax.swing.JOptionPane;
-<<<<<<< HEAD
 /**
  * 
  * @author Jostein
  *
  */
-=======
-
->>>>>>> f406317153fea89de00c011ce9a7f24837569e53
 public class Yatzoo {
 	
 	
@@ -42,16 +38,9 @@ public class Yatzoo {
 	 * Starter spillets gang. Spillet spilles helt ut og vinneren vil bli skrevet ut når spillet er ferdig.
 	 */
 	public void start() {
-		nåværendeRunde = 8;
+		nåværendeRunde = 0;
 		
-<<<<<<< HEAD
-		while(nåværendeRunde < 9) {
-=======
-		//Linja under gjort av Ole. Forteller spilleren nåværende runde
-		JOptionPane.showMessageDialog(null, "Runde " + nåværendeRunde + 1);
-		
-		while(nåværendeRunde < 12) {
->>>>>>> f406317153fea89de00c011ce9a7f24837569e53
+		while(nåværendeRunde < 11) {
 			for(Spiller s : spillere) {
 				JOptionPane.showMessageDialog(null, ""+s.getNavn()+" sin tur! Kategori: "+Blokk.getRundeNavn(nåværendeRunde));
 				s.spillRunde(nåværendeRunde);
