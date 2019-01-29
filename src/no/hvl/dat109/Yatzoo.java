@@ -14,7 +14,7 @@ public class Yatzoo {
 		
 		while(nåværendeRunde < 12) {
 			for(Spiller s : spillere) {
-				s.spillRunde();
+				s.spillRunde(nåværendeRunde);
 				
 			}
 			

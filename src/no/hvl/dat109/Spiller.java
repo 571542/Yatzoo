@@ -15,7 +15,7 @@ public class Spiller {
 
 	public void spillRunde(Integer runde) {
 		AlleTerninger.trillTerninger();
-		poengsum = regnPoengsum(runde, AlleTerninger.getVerdier());
+		poengsum = Blokk.regnPoengsum(runde, AlleTerninger.getVerdier());
 		/**
 		 * TODO regn ut poengsum
 		 * Vet ikke om det skal skje i denne klassen eller i AlleTerninger klassen

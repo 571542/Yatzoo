@@ -42,25 +42,26 @@ public class Blokk {
 		
 		switch(runde) {				
 			case 7://Tre like
-				if(harTreLike(verdier) != null) {
+				if(harTreLike(verdier)) {
 					return 3;
 				}
 				break;
 				
 			case 8://Fire like
-				if(harFireLike(verdier) != null) {
+				if(harFireLike(verdier)) {
 					return 4;
 				}
 				break;
 				
 			case 9://To par
+				
 				break;
 				
 			case 10://Hus
 				break;
 				
 			case 11://Unike
-				if((harPar(verdier)) == null) {
+				if((harPar(verdier)) {
 					return 5;
 				}
 				break;
@@ -85,29 +86,29 @@ public class Blokk {
 		return antall;
 	}
 	
-	private static String harTreLike(String[] verdier) {
+	private static boolean harTreLike(String[] verdier) {
 		
 		for(String s : verdier) {
 			
 		}
 		
 		
-		return null;
+		return false;
 	}
 	
-	private static String harFireLike(String[] verdier) {
+	private static boolean harFireLike(String[] verdier) {
 		
 		
 		
 		
-		return null;
+		return false;
 	}
 	
-	private static String harPar(String[] verdier) {
+	private static boolean harPar(String[] verdier) {
 		
 		
 		
-		return null;
+		return false;
 	}
 	
 }
