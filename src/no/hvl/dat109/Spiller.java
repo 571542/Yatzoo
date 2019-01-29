@@ -12,16 +12,29 @@ import javax.swing.JOptionPane;
 public class Spiller {
 	private String navn;
 	private Integer poengsum;
+<<<<<<< HEAD
+	
+	public Spiller(String navn) {
+		this.navn = navn;
+		this.poengsum = 0;
+	}
+	
+	/**
+	 * Spiller runden for én spiller. 
+	 * 
+	 * @param runde Den nåværende runden. 
+	 */
+=======
 
+	public static final Integer[] spillere  = { 2, 3, 4, 5 };
+
+
+>>>>>>> f406317153fea89de00c011ce9a7f24837569e53
 	public void spillRunde(Integer runde) {
 		AlleTerninger.trillTerninger();
-		poengsum = Blokk.regnPoengsum(runde, AlleTerninger.getVerdier());
-		/**
-		 * TODO regn ut poengsum
-		 * Vet ikke om det skal skje i denne klassen eller i AlleTerninger klassen
-		 */
-
-		System.out.println();
+		Integer poengRunde = Blokk.regnPoengsum(runde, AlleTerninger.getVerdier());
+		poengsum += poengRunde;
+		JOptionPane.showMessageDialog(null, "Du fikk "+poengRunde+" poeng. Din totale poengsum er nå: " +poengsum);
 	}
 
 	public String getNavn() {

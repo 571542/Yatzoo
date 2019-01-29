@@ -22,6 +22,10 @@ public class Terning {
 		this.dyr = dyr;
 	}
 	
+	/**
+	 * Triller terningen
+	 * 
+	 */
 	public void trill() {
 		Integer tilf = (int) (Math.random() * 6);
 		switch (tilf) {

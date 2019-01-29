@@ -13,6 +13,9 @@ import javax.swing.JOptionPane;
 public class AlleTerninger {
 	public static Terning[] terninger = { new Terning(), new Terning(), new Terning(), new Terning(), new Terning() };
 
+//	public AlleTerninger(Terning[] terninger) {
+//		this.terninger = terninger;
+//	}
 
 	/**
 	 * 
@@ -25,34 +28,28 @@ public class AlleTerninger {
 			t.trill();
 		}
 
-		String[] res = null;
 		//Denne for-løkken går gjennom de to ekstra kastemulighetene til spilleren
 		for (int i = 0; i < 2; i++) {
 			
-			res = AlleTerninger.getVerdier();
+			String[] res = AlleTerninger.getVerdier();
 			String input = JOptionPane.showInputDialog(null, "Dine terninger ble: 1:" + res[0] + ", 2:" + res[1]
-					+ ", 3:" + res[2] + ", 4:" + res[3] + ", 5:" + res[4] + "\nHvilke vil du bytte ut? Skriv tall. F.eks. 125 for å bytte terning nr 1, 2 og 5");
+					+ ", 3:" + res[2] + ", 4:" + res[3] + ", 5:" + res[4] + "\nKven vil du bytte ut? Skriv tal.");
 			/**
 			 * TODO sjekk om input er tall, eller om den er null
 			 */
 			
-			
-			if(input.matches("[0-9]{0,6}") && !input.equals("")) {
-				char[] cha = input.toCharArray();
-				Integer[] tal = new Integer[cha.length];
-				for (int j = 0; j < cha.length; j++) {
-					tal[j] = Character.getNumericValue(cha[j]) - 1;
-				}
-
-				AlleTerninger.trillTerninger(tal);
+			if(input.equals("")) {
+				break;
 			}
 			
-			
-			
+			char[] cha = input.toCharArray();
+			Integer[] tal = new Integer[cha.length];
+			for (int j = 0; j < cha.length; j++) {
+				tal[j] = Character.getNumericValue(cha[j]) - 1;
+			}
+
+			AlleTerninger.trillTerninger(tal);
 		}
-		res = AlleTerninger.getVerdier();
-		JOptionPane.showMessageDialog(null, "Dine terninger ble: 1:" + res[0] + ", 2:" + res[1]
-				+ ", 3:" + res[2] + ", 4:" + res[3] + ", 5:" + res[4]);
 
 	}
 

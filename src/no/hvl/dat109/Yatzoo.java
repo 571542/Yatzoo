@@ -1,31 +1,98 @@
 package no.hvl.dat109;
 
+import javax.swing.JOptionPane;
+<<<<<<< HEAD
+/**
+ * 
+ * @author Jostein
+ *
+ */
+=======
+
+>>>>>>> f406317153fea89de00c011ce9a7f24837569e53
 public class Yatzoo {
 	
 	
-	Blokk blokk;
+	//Blokk blokk;
 	Spiller[] spillere;
 	Integer nåværendeRunde;
 	
+	public static int antallSpillere() {
+		/**
+		 * spillere gir deg valget mellom å velge 2, 3, 4 eller 5 spillere
+		 */
+		final Integer[] spillere  = { 2, 3, 4, 5 };
+		
+		/**
+		 * Dialogboks som ber deg velge antall spillere 
+		 */
+		Integer spillereInput = (Integer) JOptionPane.showInputDialog(null,"Velg antall spillere: ",
+			      "Antall spillere valgt ",
+			        JOptionPane.QUESTION_MESSAGE, 
+			        null, 
+			        spillere, 
+			        spillere[0]);
+
+		return spillereInput;
+
+
+	}
 	
-	
+	/** 
+	 * Starter spillets gang. Spillet spilles helt ut og vinneren vil bli skrevet ut når spillet er ferdig.
+	 */
 	public void start() {
-		nåværendeRunde = 0;
+		nåværendeRunde = 8;
+		
+<<<<<<< HEAD
+		while(nåværendeRunde < 9) {
+=======
+		//Linja under gjort av Ole. Forteller spilleren nåværende runde
+		JOptionPane.showMessageDialog(null, "Runde " + nåværendeRunde + 1);
 		
 		while(nåværendeRunde < 12) {
+>>>>>>> f406317153fea89de00c011ce9a7f24837569e53
 			for(Spiller s : spillere) {
+				JOptionPane.showMessageDialog(null, ""+s.getNavn()+" sin tur! Kategori: "+Blokk.getRundeNavn(nåværendeRunde));
 				s.spillRunde(nåværendeRunde);
 				
 			}
-			
-			
-			
-			
-			
 			nåværendeRunde++;
 		}
+		
+		finnVinner();
 	}
 	
+	/**
+	 * Ber brukeren om å spesifisere antall og navn på spillere. Metoden skal kjøres før spillet startes. 
+	 */
+	public void initSpillere() {
+		
+		/**
+		 * spillere gir deg valget mellom å velge 2, 3, 4 eller 5 spillere
+		 */
+		final Integer[] antallSpillereAlternativ  = { 2, 3, 4, 5 };
+		
+		/**
+		 * Dialogboks som ber deg velge antall spillere 
+		 */
+		Integer spillereInput = (Integer) JOptionPane.showInputDialog(null,"Velg antall spillere: ",
+			      "Antall spillere valgt ",
+			        JOptionPane.QUESTION_MESSAGE, 
+			        null, 
+			        antallSpillereAlternativ, 
+			        antallSpillereAlternativ[0]);
+		
+		Integer antall = spillereInput;
+		spillere = new Spiller[antall];
+		
+	    for(int i = 1; i <= antall; i++) {
+	    	String navn = JOptionPane.showInputDialog(null, "Gi navn på spiller nummer " + i +": ");
+	    	spillere[i-1] = new Spiller(navn);
+	    }
+
+	
+	}
 	
 	/**
 	 * 
@@ -45,7 +112,7 @@ public class Yatzoo {
 			}
 		}
 		
-		System.out.println(vinner + " er vinneren med "+vinner.getPoengsum()+" poeng!");
+		System.out.println(vinner.getNavn() + " er vinneren med "+vinner.getPoengsum()+" poeng!");
 		
 		return vinner;
 	}
