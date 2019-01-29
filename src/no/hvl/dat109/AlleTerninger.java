@@ -83,7 +83,7 @@ public class AlleTerninger {
 	public static String[] getVerdier() {
 		String[] retur = new String[5];
 
-		for (int i = 0; i < terninger.length - 1; i++) {
+		for (int i = 0; i < terninger.length; i++) {
 			retur[i] = terninger[i].getDyr();
 		}
 
