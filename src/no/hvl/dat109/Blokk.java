@@ -42,13 +42,13 @@ public class Blokk {
 		
 		switch(runde) {				
 			case 7://Tre like
-				if(harTreLike(verdier)) {
+				if(antallLike(3, verdier)) {
 					return 3;
 				}
 				break;
 				
 			case 8://Fire like
-				if(harFireLike(verdier)) {
+				if(antallLike(4, verdier)) {
 					return 4;
 				}
 				break;
@@ -58,16 +58,21 @@ public class Blokk {
 				break;
 				
 			case 10://Hus
+				if(treLike() && toPar()) {
+					return 5;
+				}
 				break;
 				
 			case 11://Unike
-				if((harPar(verdier)) {
+				if(!(antallLike(2,verdier))) {
 					return 5;
 				}
 				break;
 				
 			case 12://Yatzoo
-				
+				if(antallLike(5, verdier)) {
+					return 4;
+				}
 				break;
 			
 		}
@@ -84,25 +89,8 @@ public class Blokk {
 		return antall;
 	}
 	
-	private static boolean harTreLike(String[] verdier) {
+	private static boolean antallLike(Integer antall, String[] verdier) {
 		
-		for(String s : verdier) {
-			
-		}
-		
-		
-		return false;
-	}
-	
-	private static boolean harFireLike(String[] verdier) {
-		
-		
-		
-		
-		return false;
-	}
-	
-	private static boolean harPar(String[] verdier) {
 		
 		
 		
