@@ -75,8 +75,6 @@ public class Blokk {
 	}
 	
 	private static Integer antallAvDyr(String dyr, String[] verdier) {
-		List<String> test = null;
-		
 		Integer antall = null;
 		for(String s : verdier) {
 			if(s == dyr) {
