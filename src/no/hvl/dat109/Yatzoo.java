@@ -34,6 +34,9 @@ public class Yatzoo {
 	public void start() {
 		nåværendeRunde = 0;
 		
+		//Linja under gjort av Ole. Forteller spilleren nåværende runde
+		JOptionPane.showMessageDialog(null, "Runde " + nåværendeRunde + 1);
+		
 		while(nåværendeRunde < 12) {
 			for(Spiller s : spillere) {
 				s.spillRunde(nåværendeRunde);

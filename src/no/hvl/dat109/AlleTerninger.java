@@ -1,7 +1,8 @@
+package no.hvl.dat109;
 /**
  * 
  */
-package no.hvl.dat109;
+
 
 import javax.swing.JOptionPane;
 
@@ -37,17 +38,19 @@ public class AlleTerninger {
 			 * TODO sjekk om input er tall, eller om den er null
 			 */
 			
-			if(input.equals("")) {
-				break;
+			
+			if(input.matches("[0-9]{0,6}") && !input.equals("")) {
+				char[] cha = input.toCharArray();
+				Integer[] tal = new Integer[cha.length];
+				for (int j = 0; j < cha.length; j++) {
+					tal[j] = Character.getNumericValue(cha[j]) - 1;
+				}
+
+				AlleTerninger.trillTerninger(tal);
 			}
 			
-			char[] cha = input.toCharArray();
-			Integer[] tal = new Integer[cha.length];
-			for (int j = 0; j < cha.length; j++) {
-				tal[j] = Character.getNumericValue(cha[j]) - 1;
-			}
-
-			AlleTerninger.trillTerninger(tal);
+			
+			
 		}
 
 	}
