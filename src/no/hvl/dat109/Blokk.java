@@ -88,6 +88,7 @@ public class Blokk {
 	
 	private static boolean antallLike(Integer antall, String[] verdier) {
 		
+		//test
 		
 		
 		
