@@ -48,13 +48,27 @@ public class Yatzoo {
 		}
 	}
 	
-//	private void startRunde() {
-//		
-//	}
 	
+	/**
+	 * 
+	 * Metoden finner hvilken spiller har høyest poengsum. 
+	 * 
+	 * Den skriver ut poengsummen til alle spillere i konsollen. 
+	 * 
+	 * @return Returnerer spilleren i spillere-tabellen med høyest poengsum. 
+	 */
 	public Spiller finnVinner() {
+		Spiller vinner = spillere[0];
 		
+		for(Spiller s : spillere) {
+			System.out.println(s);
+			if(s.getPoengsum() > vinner.getPoengsum()) {
+				vinner = s;
+			}
+		}
 		
-		return null;
+		System.out.println(vinner + " er vinneren med "+vinner.getPoengsum()+" poeng!");
+		
+		return vinner;
 	}
 }

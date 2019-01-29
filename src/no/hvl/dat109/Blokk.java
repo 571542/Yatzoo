@@ -3,8 +3,6 @@
  */
 package no.hvl.dat109;
 
-import java.util.List;
-
 /**
  * @author Jostein
  *
@@ -79,6 +77,14 @@ public class Blokk {
 		return null;
 	}
 	
+	/**
+	 * 
+	 * Metoden finner hvor mange antall det er av et type dyr blant en string-tabell.
+	 * 
+	 * @param dyr Hvilket dyr det letes etter
+	 * @param verdier String-tabell over alle terningverdiene
+	 * @return Antall av ønsket dyr i verdier-tabellen. 
+	 */
 	private static Integer antallAvDyr(String dyr, String[] verdier) {
 		Integer antall = null;
 		for(String s : verdier) {
