@@ -1,5 +1,5 @@
 
-# Java kode:
+## Java kode:
 - [ ] Fiks "To Par" metoden
 - [ ] (Validering av brukerinput og feilmeldinger)??
 
