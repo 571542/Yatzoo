@@ -128,6 +128,9 @@ public class Blokk {
 	 * @return True hvis det er to par, false hvis ikke. 
 	 */
 	private static boolean toPar(String[] verdier) {
+		/**
+		 * TODO Denne metoden fungerer ikke som tenkt. Det må ordnes.
+		 */
 		boolean toPar = false;
 		String førstePar = antallLike(2, verdier);
 		for (String s : verdier) {
