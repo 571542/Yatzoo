@@ -1,6 +1,6 @@
 
 ## Java kode:
-- [ ] Fiks "To Par" metoden
+- [x] Fiks "To Par" metoden
 - [ ] (Validering av brukerinput og feilmeldinger)??
 - [ ] Litt mer JavaDoc rundt omkring??
 
