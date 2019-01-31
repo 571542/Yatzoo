@@ -5,12 +5,12 @@ package no.hvl.dat109;
 
 /**
  * 
- * Denne klassen holder styr på de forskjellige kategoriene, og inneholder metoden for å regne ut poengsum for alle kategorier/runder. 
+ * Denne klassen holder styr pa de forskjellige kategoriene, og inneholder metoden for a regne ut poengsum for alle kategorier/runder. 
  *
  */
 public class Blokk {
 	public static String[] kategorier = {
-			"Løve",
+			"Love",
 			"Slange",
 			"Panda",
 			"Gris",
@@ -84,7 +84,7 @@ public class Blokk {
 	 * 
 	 * @param dyr Hvilket dyr det letes etter
 	 * @param verdier String-tabell over alle terningverdiene
-	 * @return Antall av ønsket dyr i verdier-tabellen. 
+	 * @return Antall av onsket dyr i verdier-tabellen. 
 	 */
 	private static Integer antallAvDyr(String dyr, String[] verdier) {
 		Integer antall = 0;
@@ -99,9 +99,9 @@ public class Blokk {
 	/**
 	 * Metoden finner om det er et anntall like eller mer av en verdi av alle verdier i terning-tabellen. Brukes i regnPoengsum().
 	 * 
-	 * @param antall Hvor mange like av hver man skal finne. F.eks. ved tre like må man sette antall = 3.
+	 * @param antall Hvor mange like av hver man skal finne. F.eks. ved tre like ma man sette antall = 3.
 	 * @param verdier String-tabell over alle terningverdiene
-	 * @return Returnerer hvilket dyr det er så mange antall i tabellen. Returnerer null hvis ikke. 
+	 * @return Returnerer hvilket dyr det er sa mange antall i tabellen. Returnerer null hvis ikke. 
 	 */
 	private static String antallLike(Integer antall, String[] verdier) {
 		Integer like = 0;
@@ -130,14 +130,14 @@ public class Blokk {
 	 */
 	private static boolean toPar(String[] verdier) {
 		/**
-		 * TODO Denne metoden fungerer ikke som tenkt. Det må ordnes.
+		 * TODO Denne metoden fungerer ikke som tenkt. Det ma ordnes.
 		 */
 		boolean toPar = false;
-		String førstePar = antallLike(2, verdier);
+		String forstePar = antallLike(2, verdier);
 		for (String s : verdier) {
 			int like = 0;
 			for (String r : verdier) {
-				if(r.equals(s) && r != førstePar) {
+				if(r.equals(s) && r != forstePar) {
 					like++;
 				}
 				
@@ -150,7 +150,7 @@ public class Blokk {
 	}
 	
 	/**
-	 * Metode som returnerer navnet på runden gitt rundenummer. 
+	 * Metode som returnerer navnet pa runden gitt rundenummer. 
 	 * 
 	 * @param runde Rundenummer
 	 * @return String som tilsvarer runden

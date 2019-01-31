@@ -31,7 +31,7 @@ public class Terning {
 		Integer tilf = (int) (Math.random() * 6);
 		switch (tilf) {
 		case 0:
-			dyr = "Løve";
+			dyr = "Love";
 			break;
 		case 1:
 			dyr = "Slange";

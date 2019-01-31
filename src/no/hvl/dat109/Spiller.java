@@ -21,7 +21,7 @@ public class Spiller {
 	/**
 	 * Spiller runden for én spiller. 
 	 * 
-	 * @param runde Den nåværende runden. 
+	 * @param runde Den navaerende runden. 
 	 */
 
 	public static final Integer[] spillere  = { 2, 3, 4, 5 };
@@ -30,7 +30,7 @@ public class Spiller {
 		AlleTerninger.trillTerninger();
 		Integer poengRunde = Blokk.regnPoengsum(runde, AlleTerninger.getVerdier());
 		poengsum += poengRunde;
-		JOptionPane.showMessageDialog(null, "Du fikk "+poengRunde+" poeng. Din totale poengsum er nå: " +poengsum);
+		JOptionPane.showMessageDialog(null, "Du fikk "+poengRunde+" poeng. Din totale poengsum er na: " +poengsum);
 	}
 
 	public String getNavn() {

@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  * 
- * Denne klassen er en samling av alle Terning-objekter. Har metoder for å trille alle terninger og for å hente verdier til alle terninger. 
+ * Denne klassen er en samling av alle Terning-objekter. Har metoder for a trille alle terninger og for a hente verdier til alle terninger. 
  *  
  */
 public class AlleTerninger {
@@ -21,18 +21,18 @@ public class AlleTerninger {
 	 * 
 	 */
 	public static void trillTerninger() {
-		//triller terningene en første gang
+		//triller terningene en forste gang
 		for (Terning t : terninger) {
 			t.trill();
 		}
 
 		String[] res = null;
-		//Denne for-løkken går gjennom de to ekstra kastemulighetene til spilleren
+		//Denne for-lokken gar gjennom de to ekstra kastemulighetene til spilleren
 		for (int i = 0; i < 2; i++) {
 			
 			res = AlleTerninger.getVerdier();
 			String input = JOptionPane.showInputDialog(null, "Dine terninger ble: 1:" + res[0] + ", 2:" + res[1]
-					+ ", 3:" + res[2] + ", 4:" + res[3] + ", 5:" + res[4] + "\nHvilke vil du bytte ut? Skriv tall. F.eks. 125 for å bytte terning nr 1, 2 og 5");
+					+ ", 3:" + res[2] + ", 4:" + res[3] + ", 5:" + res[4] + "\nHvilke vil du bytte ut? Skriv tall. F.eks. 125 for a bytte terning nr 1, 2 og 5");
 			/**
 			 * TODO sjekk om input er tall, eller om den er null
 			 */
@@ -61,7 +61,7 @@ public class AlleTerninger {
 	 * 
 	 * Triller utvalgte terninger om igjen
 	 * 
-	 * @param skalTrilles En integer-tabell med indeksene på terningene som skal trilles igjen
+	 * @param skalTrilles En integer-tabell med indeksene pa terningene som skal trilles igjen
 	 */
 	static void trillTerninger(Integer[] skalTrilles) {
 		for (Integer i : skalTrilles) {

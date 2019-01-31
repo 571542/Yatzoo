@@ -11,33 +11,33 @@ public class Yatzoo {
 	
 	//Blokk blokk;
 	Spiller[] spillere;
-	Integer nåværendeRunde;
+	Integer navaerendeRunde;
 	
 	/** 
-	 * Starter spillets gang. Spillet spilles helt ut og vinneren vil bli skrevet ut når spillet er ferdig.
+	 * Starter spillets gang. Spillet spilles helt ut og vinneren vil bli skrevet ut nar spillet er ferdig.
 	 */
 	public void start() {
-		nåværendeRunde = 0;
+		navaerendeRunde = 0;
 		
-		while(nåværendeRunde < 11) {
+		while(navaerendeRunde < 11) {
 			for(Spiller s : spillere) {
-				JOptionPane.showMessageDialog(null, ""+s.getNavn()+" sin tur! Kategori: "+Blokk.getRundeNavn(nåværendeRunde));
-				s.spillRunde(nåværendeRunde);
+				JOptionPane.showMessageDialog(null, ""+s.getNavn()+" sin tur! Kategori: "+Blokk.getRundeNavn(navaerendeRunde));
+				s.spillRunde(navaerendeRunde);
 				
 			}
-			nåværendeRunde++;
+			navaerendeRunde++;
 		}
 		
 		finnVinner();
 	}
 	
 	/**
-	 * Ber brukeren om å spesifisere antall og navn på spillere. Metoden skal kjøres før spillet startes. 
+	 * Ber brukeren om a spesifisere antall og navn pa spillere. Metoden skal kjores for spillet startes. 
 	 */
 	public void initSpillere() {
 		
 		/**
-		 * spillere gir deg valget mellom å velge 2, 3, 4 eller 5 spillere
+		 * spillere gir deg valget mellom a velge 2, 3, 4 eller 5 spillere
 		 */
 		final Integer[] antallSpillereAlternativ  = { 2, 3, 4, 5 };
 		
@@ -55,7 +55,7 @@ public class Yatzoo {
 		spillere = new Spiller[antall];
 		
 	    for(int i = 1; i <= antall; i++) {
-	    	String navn = JOptionPane.showInputDialog(null, "Gi navn på spiller nummer " + i +": ");
+	    	String navn = JOptionPane.showInputDialog(null, "Gi navn pa spiller nummer " + i +": ");
 	    	spillere[i-1] = new Spiller(navn);
 	    }
 
@@ -64,11 +64,11 @@ public class Yatzoo {
 	
 	/**
 	 * 
-	 * Metoden finner hvilken spiller har høyest poengsum. 
+	 * Metoden finner hvilken spiller har hoyest poengsum. 
 	 * 
 	 * Den skriver ut poengsummen til alle spillere i konsollen. 
 	 * 
-	 * @return Returnerer spilleren i spillere-tabellen med høyest poengsum. 
+	 * @return Returnerer spilleren i spillere-tabellen med hoyest poengsum. 
 	 */
 	public Spiller finnVinner() {
 		Spiller vinner = spillere[0];
