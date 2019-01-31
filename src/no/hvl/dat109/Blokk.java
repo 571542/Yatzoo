@@ -134,8 +134,13 @@ public class Blokk {
 		boolean toPar = false;
 		String førstePar = antallLike(2, verdier);
 		for (String s : verdier) {
-			for (int i = 0; i < verdier.length; i++) {
-				if (verdier[i].equals(s) && !verdier[i].equals(førstePar)) {
+			int like = 0;
+			for (String r : verdier) {
+				if(r.equals(s) && r != førstePar) {
+					like++;
+				}
+				
+				if(like >= 2) {
 					toPar = true;
 				}
 			}
