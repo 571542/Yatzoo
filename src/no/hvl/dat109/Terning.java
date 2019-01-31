@@ -4,7 +4,8 @@
 package no.hvl.dat109;
 
 /**
- * @author Jostein
+ *
+ * Enkel klasse for terninger. En terning kan ha forskjellige Dyr som verdier.
  *
  */
 public class Terning {

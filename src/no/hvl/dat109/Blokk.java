@@ -4,7 +4,8 @@
 package no.hvl.dat109;
 
 /**
- * @author Jostein
+ * 
+ * Denne klassen holder styr på de forskjellige kategoriene, og inneholder metoden for å regne ut poengsum for alle kategorier/runder. 
  *
  */
 public class Blokk {
@@ -25,7 +26,7 @@ public class Blokk {
 	
 	/**
 	 * 
-	 * Tar inn rundenummer og terningverdier som parametere og regner ut poengsummen.
+	 * Tar inn rundenummer og terningverdier som parametere og regner ut poengsummen. 
 	 * 
 	 * @param runde Integer som sier hvilken runde spillet er i. Mellom 0-11
 	 * @param verdier String-tabell over alle terningverdiene
@@ -79,7 +80,7 @@ public class Blokk {
 	
 	/**
 	 * 
-	 * Metoden finner hvor mange antall det er av et type dyr blant en string-tabell.
+	 * Metoden finner hvor mange antall det er av et type dyr blant en string-tabell. Brukes i regnPoengsum().
 	 * 
 	 * @param dyr Hvilket dyr det letes etter
 	 * @param verdier String-tabell over alle terningverdiene
@@ -96,7 +97,7 @@ public class Blokk {
 	}
 	
 	/**
-	 * Metoden finner om det er et anntall like eller mer av en verdi av alle verdier i terning-tabellen. 
+	 * Metoden finner om det er et anntall like eller mer av en verdi av alle verdier i terning-tabellen. Brukes i regnPoengsum().
 	 * 
 	 * @param antall Hvor mange like av hver man skal finne. F.eks. ved tre like må man sette antall = 3.
 	 * @param verdier String-tabell over alle terningverdiene
@@ -122,7 +123,7 @@ public class Blokk {
 	}
 	
 	/**
-	 * Sjekker om det er to par av ulik sort i terning-tabellen
+	 * Sjekker om det er to par av ulik sort i terning-tabellen. Brukes i regnPoengsum().
 	 * 
 	 * @param verdier String-tabell over alle terningverdiene
 	 * @return True hvis det er to par, false hvis ikke. 

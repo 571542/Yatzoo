@@ -3,7 +3,11 @@ package no.hvl.dat109.test;
 import org.junit.Test;
 import no.hvl.dat109.Blokk;
 import static org.junit.Assert.assertEquals;
-
+/**
+ * 
+ * JUnit testklasse for utregning av poeng. 
+ *
+ */
 public class PoengUtregningTest {
 	
 	String[] terninger1 = {
