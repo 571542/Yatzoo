@@ -2,14 +2,14 @@
 ## Java kode:
 - [x] Fiks "To Par" metoden
 - [ ] (Validering av brukerinput og feilmeldinger)??
-- [ ] Litt mer JavaDoc rundt omkring??
+- [x] Litt mer JavaDoc rundt omkring??
 - [ ] lage en syso sånn at vi kan se alt i consolen når spillet er ferdig??
 
 
 ## Diagrammer:
 - [ ] Oppdater diagrammene til å passe bedre med Java koden
 - [ ] Utvid brukstilfellediagrammet. Aktør: skriver inn antall spillere og navn på starten av spillet og velger terninger når det er sin tur.
-- [ ] Sekvensdiagrammet trenger en oppussing for å stemme overens med java koden. 
+- [x] Sekvensdiagrammet trenger en oppussing for å stemme overens med java koden. 
   - [ ] Kanskje også klassediagrammet?
 
 
