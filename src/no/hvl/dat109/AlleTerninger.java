@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 /**
  * 
  * Denne klassen er en samling av alle Terning-objekter. Har metoder for å trille alle terninger og for å hente verdier til alle terninger. 
- * 
+ *  
  */
 public class AlleTerninger {
 	public static Terning[] terninger = { new Terning(), new Terning(), new Terning(), new Terning(), new Terning() };
