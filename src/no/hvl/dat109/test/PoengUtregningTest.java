@@ -11,8 +11,8 @@ import static org.junit.Assert.assertEquals;
 public class PoengUtregningTest {
 	
 	String[] terninger1 = {
-			"Løve",
-			"Løve",
+			"Love",
+			"Love",
 			"Slange",
 			"Panda",
 			"Hval"
@@ -39,7 +39,7 @@ public class PoengUtregningTest {
 			"Gris",
 			"Hval",
 			"Panda",
-			"Løve"
+			"Love"
 	};
 	
 	String[] terninger5 = {
@@ -51,7 +51,7 @@ public class PoengUtregningTest {
 	};
 	
 	@Test
-	public void løveTest() {
+	public void loveTest() {
 		assertEquals(Integer.valueOf(2), Blokk.regnPoengsum(0, terninger1));
 		assertEquals(Integer.valueOf(0), Blokk.regnPoengsum(0, terninger2));
 		assertEquals(Integer.valueOf(0), Blokk.regnPoengsum(0, terninger3));
